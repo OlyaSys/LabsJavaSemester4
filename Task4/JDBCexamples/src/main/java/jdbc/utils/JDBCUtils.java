@@ -6,6 +6,20 @@ import java.util.Random;
 
 public class JDBCUtils {
 
+    public static void createTable(Connection connection) throws SQLException {
+        String sql = "CREATE TABLE IF NOT EXISTS Shop (\n" +
+                "                      ID INT,\n" +
+                "                      PRODID INT,\n" +
+                "                      TITLE VARCHAR(50),\n" +
+                "                      COST INT\n" +
+                ");";
+
+        try(PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.executeUpdate();
+        }
+    }
+
+
     public static Connection getNewConnection() throws SQLException {
         String dbURL = "jdbc:mysql://localhost:3306/shop";
         String user = "root";
@@ -29,7 +43,7 @@ public class JDBCUtils {
         }
     }
 
-    public static void fillInTabe(Connection connection, int amount) throws SQLException {
+    public static void fillInTable(Connection connection, int amount) throws SQLException {
         Random rand = new Random();
         for(int i = 1; i <= amount; i++) {
             int newProdid = rand.nextInt(10000 - 1000);

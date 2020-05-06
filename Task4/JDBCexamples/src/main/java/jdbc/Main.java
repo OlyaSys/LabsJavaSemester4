@@ -8,8 +8,9 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
         try(Connection connection = JDBCUtils.getNewConnection()) {
+            JDBCUtils.createTable(connection);
             JDBCUtils.clearTable(connection);
-            JDBCUtils.fillInTabe(connection, 5);
+            JDBCUtils.fillInTable(connection, 5);
             if (args[0].equals("/add")) {
                 JDBCUtils.add(connection, args[1], Integer.parseInt(args[2]));
             }
