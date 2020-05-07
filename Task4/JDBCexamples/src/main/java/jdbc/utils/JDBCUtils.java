@@ -3,7 +3,6 @@ package jdbc.utils;
 import java.sql.*;
 import java.util.Random;
 
-
 public class JDBCUtils {
 
     public static void createTable(Connection connection) throws SQLException {
@@ -19,15 +18,18 @@ public class JDBCUtils {
         }
     }
 
-
     public static Connection getNewConnection() throws SQLException {
-        String dbURL = "jdbc:mysql://localhost:3306/shop";
+        String dbURL = "jdbc:mysql://localhost:3306/shop?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC";
         String user = "root";
         String password = "Hih6keRes!";
-        //Class.forName("com.mysql.jdbc.Driver");
         Connection connection = DriverManager.getConnection(dbURL, user, password);
         if (connection.isValid(1)) {
-            System.out.println("Connection successful");
+            System.out.println("Please, print a command: \n/add title cost\n" +
+                                                        "/delete title\n" +
+                                                        "/show_all\n" +
+                                                        "/price title\n" +
+                                                        "/change_price title cost\n" +
+                                                        "/filter_by_price startCost endCost\n");
         }
         return connection;
     }

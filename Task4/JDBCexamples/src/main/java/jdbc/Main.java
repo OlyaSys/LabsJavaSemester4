@@ -14,7 +14,6 @@ public class Main {
             if (args[0].equals("/add")) {
                 JDBCUtils.add(connection, args[1], Integer.parseInt(args[2]));
             }
-
             if (args[0].equals("/delete")) {
                 JDBCUtils.delete(connection, args[1]);
             }
