@@ -29,7 +29,8 @@ public class JDBCUtils {
                                                         "/show_all\n" +
                                                         "/price title\n" +
                                                         "/change_price title cost\n" +
-                                                        "/filter_by_price startCost endCost\n");
+                                                        "/filter_by_price startCost endCost\n" +
+                                                        "/finish\n");
         }
         return connection;
     }
