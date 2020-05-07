@@ -5,12 +5,18 @@ enum Subject {
 }
 
 public class Student {
+    public String name;
     public int labsCount;
     public Subject subjectName;
 
-    public Student(int labsCount, Subject subjectName) {
+    public Student(String name, int labsCount, Subject subjectName) {
+        this.name = name;
         this.labsCount = labsCount;
         this.subjectName = subjectName;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getLabsCount() {
@@ -23,8 +29,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Subject = " + subjectName +
-                ", labs = " + labsCount
-                ;
+        return name + " " + subjectName + " " + labsCount;
     }
 }

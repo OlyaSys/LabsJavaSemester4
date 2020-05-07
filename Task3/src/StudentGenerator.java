@@ -17,7 +17,6 @@ public class StudentGenerator implements Runnable {
     }
 
     private Subject createSubjectName() {
-        //Subject subject;
         Random rand = new Random();
         return (Subject.values()[rand.nextInt(Subject.values().length)]);
     }
@@ -27,7 +26,7 @@ public class StudentGenerator implements Runnable {
         int count = 0;
         while (count < countGenerator) {
             Thread.currentThread().setName("Generator: ");
-            Student newStudent = new Student(createLabsCount(), createSubjectName());
+            Student newStudent = new Student("Student" + count, createLabsCount(), createSubjectName());
             if (queue.add(newStudent))
                 count++;
         }

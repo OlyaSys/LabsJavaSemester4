@@ -1,14 +1,14 @@
 import java.util.*;
 
 class Cabinet {
-    private List<Student> studentQueue;
+    private ArrayList<Student> studentQueue;
     public int maxStudentsInCabinet = 10;
 
     Cabinet() {
         studentQueue = new ArrayList<>();
     }
 
-    List<Student> getStudentQueue() {
+    ArrayList<Student> getStudentQueue() {
         return studentQueue;
     }
 
@@ -31,16 +31,16 @@ class Cabinet {
 
     synchronized Student get(Subject subjectName) {
         try {
-            if (studentQueue.size() > 0) {
-                notifyAll();
-                for (Student student : studentQueue) {
-                    if (student.getSubjectName() == subjectName) {
-                        System.out.println(studentQueue.size() + " - 1 student left cabinet ");
-                        studentQueue.remove(student);
-                        return student;
-                    }
+            //if (studentQueue.size() > 0)
+            for (Student student : studentQueue) {
+                if (student.getSubjectName() == subjectName) {
+                    //System.out.println(studentQueue.size() + " - 1 student left cabinet ");
+                    studentQueue.remove(student);
+                    notifyAll();
+                    return student;
                 }
-            } else if (StudentGenerator.work) {
+            }
+            if (StudentGenerator.work || !studentQueue.isEmpty()) {
                 wait();
             }
         } catch (InterruptedException e) {

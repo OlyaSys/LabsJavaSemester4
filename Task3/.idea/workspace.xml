@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fe199da-6e55-46c0-aa4c-b4d270834e95" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,24 +21,20 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1Z7EKBRbe65jVa5GP6f5wAny6h8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Lab3" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="Errors" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
@@ -60,7 +55,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584181665887</updated>
+      <workItem from="1588792821856" duration="10924000" />
+      <workItem from="1588849105410" duration="8445000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1588850302294">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1588850302294" />
+    <state width="1237" height="433" key="GridCell.Tab.0.bottom" timestamp="1588863739785">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="433" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1588863739785" />
+    <state width="1237" height="433" key="GridCell.Tab.0.center" timestamp="1588863739784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="433" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1588863739784" />
+    <state width="1237" height="433" key="GridCell.Tab.0.left" timestamp="1588863739784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="433" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1588863739784" />
+    <state width="1237" height="433" key="GridCell.Tab.0.right" timestamp="1588863739784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="433" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1588863739784" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1588803332071">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1588803332071" />
   </component>
 </project>
