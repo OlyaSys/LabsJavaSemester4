@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.CarController"
+            prefHeight="300.0" prefWidth="300.0">
+
+    <children>
+        <Label layoutX="70.0" layoutY="20.0" text = "Id: ">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="newTextId" layoutX="150.0" layoutY="20.0" prefHeight="30" prefWidth="100" promptText="for set"/>
+
+        <Label layoutX="70.0" layoutY="70.0" text = "Number: ">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textNumber" layoutX="150.0" layoutY="70.0" prefHeight="30" prefWidth="100"/>
+
+        <Label layoutX="70.0" layoutY="120.0" text = "Color: ">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textColor" layoutX="150.0" layoutY="120.0" prefHeight="30" prefWidth="100"/>
+
+        <Label layoutX="70.0" layoutY="170.0" text="Mark:">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textMark" layoutX="150.0" layoutY="170.0" prefHeight="30" prefWidth="100"/>
+
+        <Label layoutX="70.0" layoutY="220.0" text="Foreign:" >
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textForeign" layoutX="150.0" layoutY="220.0" prefHeight="30" prefWidth="100" promptText="1 or 0" />
+
+        <Button fx:id="btnAdd" layoutX="35.0" layoutY="270.0" mnemonicParsing="false" onAction="#addCar"
+                prefHeight="30" prefWidth="100" text="Add"/>
+
+        <Button fx:id="btnSet" layoutX="175.0" layoutY="270.0" mnemonicParsing="false" onAction="#setCar"
+                prefHeight="30" prefWidth="100" text="Set"/>
+
+    </children>
+
+</AnchorPane>

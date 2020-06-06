@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.controller.ServiceController"
+            prefHeight="300.0" prefWidth="300.0">
+    <children>
+        <Label layoutX="50.0" layoutY="25.0" text = "Id: ">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="newTextId" layoutX="150.0" layoutY="25.0" prefHeight="30" prefWidth="100" promptText="for set"/>
+
+        <Label layoutX="50.0" layoutY="80.0" text = "Name: ">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textName" layoutX="150.0" layoutY="80.0" prefHeight="30" prefWidth="100"/>
+
+        <Label layoutX="50.0" layoutY="135.0" text = "Our cost: ">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textOurCost" layoutX="150.0" layoutY="135.0" prefHeight="30" prefWidth="100"/>
+
+        <Label layoutX="50.0" layoutY="190.0" text="Foreign cost:">
+            <font>
+                <Font name="Verdana" size="14.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="textForeignCost" layoutX="150.0" layoutY="190.0" prefHeight="30" prefWidth="100"/>
+
+        <Button fx:id="btnAdd" layoutX="30.0" layoutY="245.0" mnemonicParsing="false" onAction="#addService"
+                prefHeight="30" prefWidth="100" text="Add"/>
+
+        <Button fx:id="btnSet" layoutX="170.0" layoutY="245.0" mnemonicParsing="false" onAction="#setCar"
+                prefHeight="30" prefWidth="100" text="Set"/>
+    </children>
+</AnchorPane>

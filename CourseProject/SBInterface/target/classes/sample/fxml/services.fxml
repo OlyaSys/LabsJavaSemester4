@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="550.0" prefWidth="1000.0"
+            xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="sample.controller.ServiceController">
+    <children>
+        <Button fx:id="btnShowSer" layoutX="75.0" layoutY="480.0" mnemonicParsing="false" onAction="#showServices"
+                prefHeight="30" prefWidth="100" text="Refresh"/>
+
+        <Button fx:id="btnFindById" layoutX="275.0" layoutY="480.0" mnemonicParsing="false" onAction="#findServiceById"
+                prefHeight="30" prefWidth="100" text="Find By Id"/>
+
+        <Button fx:id="btnAdd" layoutX="700.0" layoutY="480.0" mnemonicParsing="false" onAction="#openAddStage" visible="false"
+                prefHeight="30" prefWidth="100" text="Add/Set"/>
+
+        <TextField  fx:id="textId" layoutX="385.0" layoutY="480.0" prefHeight="30" prefWidth="50"/>
+
+        <TextArea fx:id="outWindow" layoutX="500.0" prefHeight="470" prefWidth="500"
+                  text = "Information about services"/>
+
+        <TableView fx:id="tableService" prefHeight="470.0" prefWidth="500.0">
+            <columns>
+                <TableColumn prefWidth="125.0" text="ID" fx:id="idSer" />
+                <TableColumn prefWidth="125.0" text="Name" fx:id="nameSer" />
+                <TableColumn prefWidth="125.0" text="Our cost" fx:id="costOur" />
+                <TableColumn prefWidth="125.0" text="Foreign cost" fx:id="costForeign" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
