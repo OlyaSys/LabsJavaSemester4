@@ -38,16 +38,15 @@ public class AddController implements Initializable {
     public void addWork() {
         try {
             String date = textDate.getText();
-            int masterName = carsComboBox.getSelectionModel().getSelectedIndex() + 1;
-            int carNumber = mastersComboBox.getSelectionModel().getSelectedIndex() + 1;
-            int serviceName = servicesComboBox.getSelectionModel().getSelectedIndex() + 1;
+            int carID = carsComboBox.getSelectionModel().getSelectedIndex() + 1;
+            int masterID = mastersComboBox.getSelectionModel().getSelectedIndex() + 1;
+            int serviceID = servicesComboBox.getSelectionModel().getSelectedIndex() + 1;
 
             if (!date.isEmpty()) {
                 String json = "{\n\t\"dateWork\": \"" + date
-                        + "\",\n\t\"masters\": {\n\t\t\"id\": "
-                        + masterName + "\n\t},\n\t\"cars\": {\n\t\t\"id\": "
-                        + carNumber + "\n\t},\n\t\"services\": {\n\t\t\"id\": "
-                        + serviceName + "\n\t}\n}";
+                        + "\",\n\t\"masters\": {\n\t\t\"id\": " + masterID + "\n\t}," +
+                        "\n\t\"cars\": {\n\t\t\"id\": " + carID + "\n\t}," +
+                        "\n\t\"services\": {\n\t\t\"id\": " + serviceID + "\n\t}\n}";
 
                 JSONObject jsonObject = new JSONObject(JSON.doPOSTRequest("http://localhost:8080/bt/addWork", json));
 
@@ -68,7 +67,6 @@ public class AddController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         StageConfig.setAddController(this);
-
         outWindow = StageConfig.getWorkController().outWindow;
         tableWorks = StageConfig.getWorkController().tableWorks;
     }

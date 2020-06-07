@@ -9,7 +9,6 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="sample.controller.ServiceController"
             prefHeight="300.0" prefWidth="300.0">
-
     <children>
         <Label layoutX="50.0" layoutY="25.0" text = "Id: ">
             <font>
@@ -48,7 +47,5 @@
 
         <Button fx:id="btnSet" layoutX="170.0" layoutY="245.0" mnemonicParsing="false" onAction="#setCar"
                 prefHeight="30" prefWidth="100" text="Set"/>
-
     </children>
-
 </AnchorPane>

@@ -92,7 +92,6 @@ public class ServiceController implements Initializable {
 
                 JSONObject jsonObject = new JSONObject(JSON.doPOSTRequest("http://localhost:8080/bt/setService/" + newTextId.getText(), json));
 
-                System.out.println(jsonObject);
                 ObservableList<Services> serviceRow = FXCollections.observableArrayList();
                 serviceRow.add(JSON.getService(jsonObject));
                 tableService.setItems(serviceRow);
@@ -118,7 +117,7 @@ public class ServiceController implements Initializable {
 
     public void openAddStage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(sample.Stage.class.getResource("../fxml/addService.fxml"));
+        loader.setLocation(sample.Stage.class.getResource("fxml/addService.fxml"));
         AnchorPane newPage = loader.load();
 
         stage = sample.Stage.createStage(newPage, "Add", stage, 300, 300);
@@ -143,7 +142,6 @@ public class ServiceController implements Initializable {
 
                 ObservableList<Services> serviceRow = FXCollections.observableArrayList();
                 serviceRow.add(JSON.getService(jsonObject));
-                System.out.println(serviceRow);
                 tableService.setItems(serviceRow);
                 stage.close();
                 outWindow.appendText("\nService is added successfully");

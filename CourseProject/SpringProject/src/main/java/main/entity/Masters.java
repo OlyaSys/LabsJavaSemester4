@@ -8,7 +8,7 @@ public class Masters {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NAME")
+    @Column(name = "NAME", nullable = false)
     private String nameMaster;
 
     public Masters() {

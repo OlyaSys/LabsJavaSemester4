@@ -8,16 +8,16 @@ public class Cars {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NUM", unique = true)
+    @Column(name = "NUM", nullable = false)
     private String number;
 
-    @Column(name = "COLOR")
+    @Column(name = "COLOR", nullable = false)
     private String color;
 
-    @Column(name = "MARK")
+    @Column(name = "MARK", nullable = false)
     private String mark;
 
-    @Column(name = "IS_FOREIGN")
+    @Column(name = "IS_FOREIGN", nullable = false)
     private Integer isForeign;
 
     public Cars() {
@@ -29,7 +29,6 @@ public class Cars {
         this.mark = mark;
         this.isForeign = isForeign;
     }
-
 
     public Long getId() {
         return id;

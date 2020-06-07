@@ -12,8 +12,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import okhttp3.*;
 import org.json.*;
+import sample.JSON;
 import sample.StageConfig;
 
 import java.io.IOException;
@@ -55,19 +55,10 @@ public class Controller implements Initializable {
 
     public Boolean checkLogIn(String userName, String password) throws Exception {
         String json = "{\n\t\"userName\":\"" + userName + "\",\n\t\"password\":\"" + password + "\"\n}";
+        String url = "http://localhost:8080/bt/auth/singin";
 
-        RequestBody body = RequestBody.create(MediaType.parse("application/json"), json);
+        JSONObject jsonObject = new JSONObject(JSON.doPOSTRequest(url, json));
 
-        OkHttpClient client = new OkHttpClient().newBuilder()
-                .build();
-        Request request = new Request.Builder()
-                .url("http://localhost:8080/bt/auth/singin")
-                .post(body)
-                .build();
-
-        Response response = client.newCall(request).execute();
-        JSONObject jsonObject = new JSONObject(response.body().string());
-        System.out.println(jsonObject);
         if (jsonObject.has("token")) {
             User user = new User(jsonObject.getString("userName"), jsonObject.getString("token"));
             this.role = jsonObject.getJSONArray("role").get(0).toString();
@@ -85,7 +76,6 @@ public class Controller implements Initializable {
         label.setTextFill(Color.web("#FF0000"));
         root.getChildren().add(label);
     }
-
 
     public void getAccess(){
         try {

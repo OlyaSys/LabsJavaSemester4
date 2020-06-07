@@ -58,7 +58,7 @@ public class WorksServiceImpl implements WorksService {
         return worksRepository.save(work);
     }
 
-    /*@Override
+    @Override
     public Works setDate(Long id, String dateWork) {
         Optional<Works> optionalWorks = worksRepository.findById(id);
         if (optionalWorks.isPresent()) {
@@ -142,7 +142,7 @@ public class WorksServiceImpl implements WorksService {
         } else {
             throw new FieldNotFoundException("Works do not contain such id = " + id);
         }
-    }*/
+    }
 
     @Override
     public void deleteFromDB(Long id) {

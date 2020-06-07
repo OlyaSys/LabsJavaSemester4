@@ -18,13 +18,13 @@
 
         <TextField  fx:id="textId" layoutX="385.0" layoutY="480.0" prefHeight="30" prefWidth="50"/>
 
-        <Button fx:id="btnAdd" layoutX="550.0" layoutY="480.0" mnemonicParsing="false" onAction="#openStage" visible="false"
-                prefHeight="30" prefWidth="100" text="Add/Set"/>
+        <Button fx:id="btnAdd" layoutX="700.0" layoutY="480.0" mnemonicParsing="false" onAction="#openStage" visible="false"
+                prefHeight="30" prefWidth="100" text="Add"/>
 
         <TextArea fx:id="outWindow" layoutX="500.0" prefHeight="470" prefWidth="500"
                   text = "Information about car"/>
 
-        <TableView fx:id="tableCars" prefHeight="470.0" prefWidth="500.0">
+        <TableView fx:id="tableCars" prefHeight="470.0" prefWidth="500.0" onMouseClicked="#selectContractContractTab">
             <columns>
                 <TableColumn prefWidth="100.0" text="ID" fx:id="idCar" />
                 <TableColumn prefWidth="100.0" text="Number" fx:id="number" />

@@ -9,19 +9,19 @@ public class Works {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "DATE_WORK")
+    @Column(name = "DATE_WORK", nullable = false)
     private String dateWork;
 
     @ManyToOne
-    @JoinColumn(name = "MASTER_ID")
+    @JoinColumn(name = "MASTER_ID", nullable = false)
     private Masters masters;
 
     @ManyToOne
-    @JoinColumn(name = "CAR_ID")
+    @JoinColumn(name = "CAR_ID", nullable = false)
     private Cars cars;
 
     @ManyToOne
-    @JoinColumn(name = "SERVICE_ID")
+    @JoinColumn(name = "SERVICE_ID", nullable = false)
     private Services services;
 
     public Works() {

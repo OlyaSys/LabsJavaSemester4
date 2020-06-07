@@ -66,7 +66,7 @@ public class MasterController implements Initializable {
 
     public void openAddStage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(sample.Stage.class.getResource("../fxml/addMaster.fxml"));
+        loader.setLocation(sample.Stage.class.getResource("fxml/addMaster.fxml"));
         AnchorPane page = loader.load();
 
         stage = sample.Stage.createStage(page, "Add", stage, 290, 290);
@@ -89,7 +89,6 @@ public class MasterController implements Initializable {
 
                 ObservableList<Masters> masterRow = FXCollections.observableArrayList();
                 masterRow.add(JSON.getMaster(jsonObject));
-                System.out.println(masterRow);
                 tableMaster.setItems(masterRow);
                 stage.close();
                 outWindow.appendText("\nMaster is added successfully");
